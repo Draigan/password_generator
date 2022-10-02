@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="./dist/script.js" defer></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <div class="flex-wrapper">
+            <div class="top"><h3>Password Generator</h3></div>
+            <div class="middle"><h5>PASSWORD</h5> <span>@@</span>
+            </div>
+            <div class="bottom">
+             
+                <div class="slider-wrapper">
+                    <form action="" id="pass-gen-id">
+                    <input type="range" id="slider" name="slider" step="1"
+                        min="1" max="20">
+                    <label for="slider"></label>
+                    <div> @@</div>
+                </div>
+  
+                    <div>
+                        <input type="checkbox" id="uppercase" name=""> Include Uppercase
+                        <label for=""></label>
+                        <div>
+                            <form action="">
+                                <input type="checkbox" id="lowercase" name=""> Include
+                                Lowercase
+                                <label for=""></label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="numbers" name=""> Include
+                                Numbers
+                                <label for=""></label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="special" name=""> Include
+                                Special Characters
+                                <label for=""></label>
+                            </div>
+
+                        </form>
+
+                        <div class="strength">
+                            <h7>Strength</h7>
+                            <div class="strength-meter">
+                                @@@@
+                            </div>
+                        </div>
+                        <button>Generate</button>
+
+                    </div>
+                </div>
+
+
+            </body>
+        </html>

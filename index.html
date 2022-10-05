@@ -12,51 +12,64 @@
 
         <div class="flex-wrapper">
             <div class="top"><h3>Password Generator</h3></div>
-            <div class="middle"><h5>PASSWORD</h5> <span>@@</span>
+            <div class="middle"><input type="text" value="Hello World" id="password-field"><button onclick="copy()">Copy</button>
             </div>
             <div class="bottom">
              
-                <div class="slider-wrapper">
+              
                     <form action="" id="pass-gen-id">
-                    <input type="range" id="slider" name="slider" step="1"
-                        min="1" max="20">
+                        <div class="slider-wrapper">
+                    <input type="range" id="slider" class="slider-class" name="slider" step="1"
+                        min="4" max="20" onchange="updateSlider(), checkStrength()" oninput="updateSlider(), checkStrength()">
                     <label for="slider"></label>
-                    <div> @@</div>
+                    <div>
+                        <p id="slider-score"></p>
+         </div>
                 </div>
   
-                    <div>
-                        <input type="checkbox" id="uppercase" name=""> Include Uppercase
+                    <div>  
+                        <input type="checkbox" id="uppercase" name="" onclick="checkStrength()"> Include Uppercase
                         <label for=""></label>
                         <div>
-                            <form action="">
-                                <input type="checkbox" id="lowercase" name=""> Include
+                           
+                                <input type="checkbox" id="lowercase" name="" onclick="checkStrength()"> Include
                                 Lowercase
                                 <label for=""></label>
                             </div>
 
                             <div>
-                                <input type="checkbox" id="numbers" name=""> Include
+                                <input type="checkbox" id="numbers" name="" onclick="checkStrength()"> Include
                                 Numbers
                                 <label for=""></label>
                             </div>
 
                             <div>
-                                <input type="checkbox" id="special" name=""> Include
+                                <input type="checkbox" id="special" name="" onclick="checkStrength()"> Include
                                 Special Characters
                                 <label for=""></label>
                             </div>
 
-                        </form>
+                  
 
                         <div class="strength">
                             <h7>Strength</h7>
                             <div class="strength-meter">
-                                @@@@
+                                <p id="strength-indicator" >WEAKEST</p>
+                       <div id="tick1" class="strength-tick-1"></div>
+                       <div id="tick2" class="strength-tick-2"></div>
+                       <div id="tick3" class="strength-tick-3"></div>
+                       <div id="tick4" class="strength-tick-4"></div>
+                       <div id="tick5" class="strength-tick-5"></div>
+                       <div id="tick6" class="strength-tick-6"></div>
+  
+        
                             </div>
                         </div>
-                        <button>Generate</button>
+                       
 
                     </div>
+                </form>
+                <button onclick="generate()">Generate</button>
                 </div>
 
 
